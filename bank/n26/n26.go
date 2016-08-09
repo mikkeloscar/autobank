@@ -63,8 +63,6 @@ func (n *N26) login() error {
 			Scope        string `json:"scope"`
 		}{}
 
-		fmt.Println(resp.StatusCode)
-
 		dec := json.NewDecoder(resp.Body)
 		err = dec.Decode(&out)
 		if err != nil {
